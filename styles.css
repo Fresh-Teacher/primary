@@ -75,17 +75,6 @@ img {
     color: rgb(255, 255, 255);
     text-decoration: none;
   }
-
-  nav a {
-    font-size: 16px; /* adjust the value to your desired font size */
-    line-height: 15px; /* adjust the value to match the navbar height */
-  }
-  
-
-  /*Capitalise titles*/
-  h2 {
-    text-transform: uppercase;
-  }
   
   /* Style the navigation drawer trigger button */
   #nav-drawer-trigger {
@@ -326,11 +315,9 @@ z-index: 1; /* Make sure the icon is displayed on top of other elements */
         align-items: center;
         justify-content: space-around;
         padding: 10px 20px;
-        height: 40px;
       }
 
       #navbar a {
-        line-height: 10px;
         color: #fff;
         text-decoration: none;
         font-size: 16px;
@@ -420,6 +407,11 @@ z-index: 1; /* Make sure the icon is displayed on top of other elements */
         padding: 0.5rem 1rem;
         border-radius: 5px;
         cursor: pointer;
+      }
+
+      /*capitalise h2 tags*/
+      h2 {
+        text-transform: uppercase;
       }
       
       .share-btn i {
