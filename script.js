@@ -135,3 +135,33 @@ navDrawer.addEventListener("touchend", function(event) {
 function hideNav() {
   document.querySelector('#nav-drawer').classList.add('hidden');
 }
+
+let startIndex = 0;
+const filesPerPage = 50;
+
+function retrieveFiles(start, amount) {
+    // Code to retrieve the files from the GitHub repository
+    // and append them to the page
+    // you can use the Fetch API or XMLHttpRequest
+    // to get the files and append them to the page
+    // The links are already there in the HTML code
+    // so you just need to change the href attribute
+
+    startIndex += amount;
+}
+
+// Function to check if the user has scrolled to the bottom of the page
+function checkBottom() {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        // If the user has scrolled to the bottom, retrieve more files
+        retrieveFiles(startIndex, filesPerPage);
+    }
+}
+
+// Attach the checkBottom function to the window's scroll event
+window.addEventListener("scroll", checkBottom);
+
+function hideLoadMoreButton() {
+    const loadMoreButton = document.getElementById("load-more-button");
+    loadMoreButton.style.display = "none";
+}
